@@ -7,5 +7,9 @@ const fetchArticlesWithQuery = ({searchQuery, page}) => {
       .get(`https://pixabay.com/api/?q=${searchQuery}&page=${page}&key=${KEY}&image_type=photo&orientation=horizontal&per_page=12`)
       .then(response => response.data.hits);
   };
+
+const api = {
+  fetchArticlesWithQuery,
+}
   
-  export default fetchArticlesWithQuery;
+  export default api;
